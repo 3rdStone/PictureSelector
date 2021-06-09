@@ -261,6 +261,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="14dp"
+                android:fontFamily="sans-serif-medium"
                 android:background="@drawable/radius_bg_shape_16"
                 android:gravity="center"
                 android:text="Next (0)"
