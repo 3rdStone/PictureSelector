@@ -1448,6 +1448,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     public void onChange(List<LocalMedia> selectData) {
+        mSelectData = selectData;
         changeImageNumber(selectData);
         if (mSelectedLocalAdapter != null) {
             mSelectedLocalAdapter.setList(selectData);
