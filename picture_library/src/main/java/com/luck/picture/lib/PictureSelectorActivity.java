@@ -1062,12 +1062,11 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
 
             if (totalTime < 6000) {
                 Toast.makeText(this, getString(R.string.video_at_least_6_seconds), Toast.LENGTH_SHORT).show();
-                if (mMyDialog != null) {
-                    mMyDialog.dismiss();
-                }
                 return;
             }
-
+            if (mMyDialog != null) {
+                mMyDialog.dismiss();
+            }
             LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(this);//获取实例
             Intent intent = new Intent("com.newsclapper.picture");
             intent.putParcelableArrayListExtra("LOCAL_MEDIA_LIST", (ArrayList<? extends Parcelable>) result);
