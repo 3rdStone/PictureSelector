@@ -1061,6 +1061,9 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
 
 
             if (totalTime < 6000) {
+                if (mMyDialog != null) {
+                    mMyDialog.dismiss();
+                }
                 Toast.makeText(this, getString(R.string.video_at_least_6_seconds), Toast.LENGTH_SHORT).show();
                 return;
             }
