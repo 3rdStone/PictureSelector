@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.luck.picture.lib.R;
+import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.config.PictureSelectionConfig;
 import com.luck.picture.lib.entity.LocalMedia;
 import com.luck.picture.lib.tools.DateUtils;
@@ -47,7 +48,7 @@ public class SelectedLocalDataMedia extends RecyclerView
         }
 
         holder.tvDuration.setText(DateUtils.formatDurationTime(list.get(position).getDuration()));
-
+        holder.tvDuration.setVisibility(PictureMimeType.isHasVideo(list.get(position).getMimeType())? View.VISIBLE : View.GONE);
         holder.ivClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
